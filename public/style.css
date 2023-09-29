@@ -1,0 +1,165 @@
+body{
+    background: #E2F2DA;
+    font-size: large;
+}
+a{
+    color: inherit;
+    text-decoration: none !important;
+}
+table, th, td {
+	border: 1px solid black;
+}
+#homepageIntro{
+	margin-left: 50px;
+	margin-right: 50px;
+	font-size: large;
+	font-weight: bold;
+}
+footer {
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	width: 100%;
+	background-color: #113600;
+	color: #E2F2DA;
+	cursor: default;
+ }
+#center{
+    font-size: xx-large;
+    text-align: center;
+}
+#SiteName{
+    color: #1F5704;
+    text-shadow:5px 5px #A4E285;
+}
+/* Flip book about us: */
+input{
+	display: none;
+}
+img{
+	width: 100%;
+	height: 100%;
+}
+.book{
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	font-family: "Roboto", sans-serif;
+	background: linear-gradient(90deg, #E2F2DA 50%, #4a1010 50%);
+}
+#cover{
+	width: 250px;
+	height: 300px;
+}
+.flip-book{
+	width: 250px;
+	height: 300px;
+	position: relative;
+	perspective: 1500px;
+}
+.flip{
+	width: 100%;
+	height: 100%;
+	position: absolute;
+	top: 0;
+	left: 0;
+	transform-origin: left;
+	transform-style: preserve-3d;
+	transform: rotateY(0deg);
+	transition: .5s;
+	color: #000;
+}
+p{
+	font-size: 14px;
+	line-height: 24px;
+}
+.front{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	background-color: #fff;
+	box-sizing: border-box;
+	padding: 0 13px;
+	box-shadow: inset 20px 0 50px rgba(0,0,0,0.5) 0 2px 5px rgba(0,0,0,.5);
+}
+.back{
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	top: 0;
+	left: 0;
+	z-index: 99;
+	transform: rotateY(180deg);
+	backface-visibility: hidden;
+	background: #000;
+}
+.next-btn{
+	position: absolute;
+	bottom: 13px;
+	right: 13px;
+	cursor: pointer;
+	color: #000;
+}
+.back-btn{
+	position: absolute;
+	bottom: 13px;
+	right: 13px;
+	cursor: pointer;
+	color: #fff;
+}
+#p1{
+	z-index: 3;
+}
+#p2{
+	z-index: 2;
+}
+#p3{
+	z-index: 1;
+}
+#c1:checked ~ .flip-book #p1{
+	transform: rotateY(-180deg);
+	z-index: 1;
+}
+#c2:checked ~ .flip-book #p2{
+	transform: rotateY(-180deg);
+	z-index: 2;
+}
+#c3:checked ~ .flip-book #p3{
+	transform: rotateY(-180deg);
+	z-index: 3;
+}
+
+/* buttons on home page */
+#itbutton{
+    background: #113600;
+    color:#A4E285;
+	padding: 15px 32px;
+    text-align: center;
+	border-radius: 25px;
+}
+#itbutton:hover{
+    background: #A4E285;
+    color:#113600;
+}
+#managementbutton{
+    background: #113600;
+    color:#A4E285;
+	padding: 15px 32px;
+    text-align: center;
+	border-radius: 25px;
+}
+#managementbutton:hover{
+    background: #A4E285;
+    color:#113600;
+}
+#aboutusbutton{
+	background: #113600;
+	color:#A4E285;
+}
+.college_buttons{
+	margin: auto;
+  	width: 50%;
+}
